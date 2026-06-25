@@ -11,7 +11,7 @@ def get_weather() -> None:
         "key": API_KEY,
         "q": CITY,
     }
-    response = requests.get(URL, params)
+    response = requests.get(URL, params=params)
     data = response.json()
 
     city = data["location"]["name"]
